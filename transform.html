@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css transform</title>
+</head>
+<style>
+	#demo{
+	  width:90px;
+	  height:90px;
+	  border:1px solid black;
+	  border-radius:8px;
+	  background:red;
+	  animation: rotate 3s linear infinite;
+	}
+	@keyframes rotate{from{transform: rotate(0deg)}
+	    to{transform: rotate(359deg)}
+	}
+</style>
+<body>
+<div id="demo">demo</div>	
+</body>
+</html>
