@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 去掉最后一条边界线</title>
+</head>
+<style>
+	/*共用的CSS*/
+	/* .list_border{
+		float: left;
+	} */
+	.list {
+	  padding:0px;
+	  float: left;
+	  background: lightgray;
+	  width:300px;
+	}
+	li{
+	  list-style-type:none;
+	  width:99px;
+	  float: left;
+	  margin:5px 0px;
+	  text-align: center;
+	}
+	/*伪类的CSS*/
+	/* .ul_fake  ul li{
+		border-right: 1px solid black;//边框在右边
+	}
+	.ul_fake  li:nth-child(3n){
+		border:none; //使用伪类，将3n的边框不显示
+	}*/
+	/*障眼法的CSS
+	*
+	*ul中的列表都向左移了一个像素
+	*并且被overflow：hidden给掩盖了
+	*/
+	.ul_container ul li{
+		border-left:1px solid black;//边框在左边
+	}
+	.ul_container{
+		overflow: hidden;
+	}
+	ul{
+		margin-left: -1px;
+	} 
+
+</style>
+<body>
+<div class='ul_container'>
+	<ul class="list">
+	    <li>js</li>
+	    <li>html</li>
+	    <li>css</li>
+	    <li>java</li>
+	    <li>php</li>
+	    <li>python</li>
+	</ul>
+</div>
+<!-- <div class="list_border">
+  <h1>第一种：伪类</h1>
+  <div class="ul_fake">
+    <ul class="list">
+        <li>js</li>
+        <li>html</li>
+        <li>css</li>
+        <li>java</li>
+        <li>php</li>
+        <li>python</li>
+      </ul>
+  </div>
+
+  <h1>第二种：障眼法</h1>
+  <div class="ul_shield">
+    <ul class="list">
+        <li>js</li>
+        <li>html</li>
+        <li>css</li>
+        <li>java</li>
+        <li>php</li>
+        <li>python</li>
+      </ul>
+  </div> -->
+</div>
+  
+
+
+</body>
+</html>

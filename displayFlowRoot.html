@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>display:flow-root</title>
+</head>
+<style>
+	.box {
+		width:400px;
+		border: 1px solid black;
+		/*display: flow-root;//解决float高度坍塌的问题*/
+	}
+	.box:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.item {
+		width: 100px;
+		height: 100px;
+		background: red;
+		float: left;
+	}
+</style>
+<body>
+	<div class="box">
+		<div class="item">display:flow-root</div>
+	</div>
+</body>
+</html>
