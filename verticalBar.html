@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>矩形左边有竖线，可以有多少种实现方式</title>
+</head>
+<style>
+
+	div {
+		position:relative;
+		width: 200px;
+		height: 60px;
+		background: #c3b4b4;
+	}
+	.borderLeft {
+		border-left: 5px solid #d63636;
+	}
+	.pseudo-element:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		width: 5px;
+		height: 60px;
+		background: #d63636;
+	}
+	.outer-box-shadow {
+		box-shadow: -5px 0px 0 0 #d63636;
+	}
+	.inner-box-shadow {
+		box-shadow: 5px 0px 0 0 #d63636 inset;
+	}
+	.drop-shadow {
+		filter: drop-shadow(-5px 0px 0 #d63636);
+	}
+	.scroll {
+		width: 205px;
+		background: #d63636;
+		overflow-y: scroll;
+	}
+	.scroll::-webkit-scrollbar {
+		width: 200px;
+		background-color: #c3b4b4;
+	}
+	.outline {
+		height: 50px;
+		outline: 5px solid #d63636;
+	}
+	.outline:after {
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		bottom: -5px;
+		left: 0;
+		content: '';
+		background: #c3b4b4;
+	}
+	.linear-gradient {
+		background-image:linear-gradient(90deg, #d63636 0px, #d63636 5px, transparent 5px);
+	}
+</style>
+<body>
+	<p>第一种：使用左边框</p>
+	<div class="borderLeft"></div>
+	<p>第二种：使用伪元素</p>
+	<div class="pseudo-element"></div>
+	<p>第三种：外box-shadow</p>
+	<div class="outer-box-shadow"></div>
+	<p>第四种：内box-shadow</p>
+	<div class="inner-box-shadow"></div>
+	<p>第五种：filter：drop-shadow</p>
+	<div class="drop-shadow"></div>
+	<p>第六种：使用滚动条</p>
+	<div class="scroll"></div>
+	<p>第七种：outline</p>
+	<div class="outline"></div>
+	<p>第八种：linear-gradient</p>
+	<div class="linear-gradient"></div>
+</body>
+</html>
