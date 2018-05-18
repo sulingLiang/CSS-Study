@@ -5,13 +5,21 @@
 	<title>linear-gradient</title>
 </head>
 <style>
-	.linearGradient {
+	.linearGradient1 {
 		width: 400px;
 		height: 300px;
-		background-image:linear-gradient(90deg, red 100px, yellow 200px);
+		background-image:linear-gradient(45deg, red 100px, yellow 200px);
+	}
+	.linearGradient2 {
+		width: 400px;
+		height: 300px;
+		background-image:linear-gradient(-315deg, red 100px, yellow 200px);
 	}
 </style>
 <body>
-	<div class="linearGradient"></div>
+	<p>正向linear-gradient</p>
+	<div class="linearGradient1"></div>
+	<p>反向linear-gradient</p>
+	<div class="linearGradient2"></div>
 </body>
 </html>
