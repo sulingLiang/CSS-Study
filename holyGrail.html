@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现三栏布局之圣杯布局</title>
+</head>
+<style>
+	html,body {
+		padding: 0;
+		margin: 0;
+	}
+	#container{
+		padding: 0 300px 0 200px;
+	}
+	#main,#left,#right {
+		height: 400px;
+		min-height: 150px;
+		float: left;
+		position: relative;
+		line-height: 400px;
+    	text-align: center;
+	}
+	#main {
+		width: 100%;
+		background: green;
+	}
+	#left{
+		width: 200px;
+		background: red;
+		margin-left: -100%;
+		left: -200px;
+	}
+	#right{
+		width: 300px;
+		background: yellow;
+		margin-left: -300px;
+		right: -300px;
+	}
+</style>
+<body>
+	<div id="container">
+		<div id="main">main</div>
+		<div id="left">left</div>
+		<div id="right">right</div>
+	</div>
+</body>
+</html>
