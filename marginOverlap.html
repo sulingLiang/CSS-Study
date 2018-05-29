@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BFC 应用</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box {
+		overflow: hidden;
+	}
+	.box p {
+		margin: 20px 0;
+		background-color: pink;
+	}
+</style>
+<body>
+	<h1>解决 margin 重叠</h1>
+	<div class="box">
+		<p>item 1 item 1 item 1</p>
+	</div>
+	<div class="box">
+		<p>item 2 item 2 item 2</p>
+	</div>
+
+	<h1>解决浮动元素高度坍塌问题</h1>
+	<div class="box" style="border:1px solid black;">
+		<div style="width: 150px; height: 180px; background: pink;float: left;"></div>
+	</div>
+
+	<h1>解决浮动元素侵占问题</h1>
+	<div class="box">
+		<div class="item1" style="width: 100px; height: 100px; background: pink; float: left;">item1</div>
+		<div class="item2" style="height:200px; background: yellow; width: 200px; overflow: hidden;">item2</div>
+	</div>
+</body>
+</html>
