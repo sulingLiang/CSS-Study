@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文档上下文</title>
+</head>
+<style>
+
+	body {
+		padding: 0;
+		margin: 0;
+		height:300px;
+	}
+	#distance {
+		margin: 50px 30px;
+	}
+	#box {
+		width: 100px;
+		height: 500px;	
+		overflow: auto;
+	}
+	#demo {
+		width: 220px;
+		height: 300px;
+		margin: 20px 10px;
+		padding: 20px 10px;
+		border: 2px solid black;
+		background: red;
+	}
+</style>
+<body>
+	<!-- <img src="/a1.jpg" alt="a1.jpg" id="distance"> -->
+	<div id="box">
+		<div id="demo">demo demo demo</div>
+	</div>
+	<script>
+		/*var distance = document.getElementById('distance');
+		console.log(distance.offsetTop);
+		console.log(distance.offsetLeft);
+		console.log(distance.offsetWidth);
+		console.log(distance.offsetHeight);*/
+		
+		var demo = document.getElementById('demo');
+		var box = document.getElementById('box');
+		/*var sTop = document.body.scrollTop;
+	    if(sTop>100){
+	        document.getElementById("box").style.display="block";
+	    }else{
+	        document.getElementById("box").style.display="none";
+	    }*/
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			console.log(window.scrollTop);
+			console.log(demo.scrollLeft);
+			console.log(demo.scrollWidth);
+			console.log(demo.scrollHeight);
+	
+		console.log(demo.clientTop);
+		console.log(demo.clientLeft);
+		console.log(demo.clientWidth);
+		console.log(demo.clientHeight);
+		
+
+	</script>
+</body>
+</html>
